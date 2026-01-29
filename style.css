@@ -1,0 +1,196 @@
+:root {
+    --bg: #0a0a0a;
+    --card-bg: rgba(23, 23, 23, 0.6);
+    --border: rgba(255, 255, 255, 0.08);
+    --hover-border: rgba(255, 255, 255, 0.2);
+    --text-main: #ffffff;
+    --text-muted: #a1a1aa;
+    --accent: #3b82f6; /* Modern Blue */
+    --coffee: #ffdd00;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+/* Background Ambient Glow */
+.background-gradient {
+    position: fixed;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at center, #1e1b4b 0%, #0a0a0a 50%);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 1.5rem;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Card Base Styles */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--hover-border);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+    background: rgba(40, 40, 40, 0.6);
+}
+
+/* Profile Card (Spans 2 cols, 2 rows) */
+.profile-card {
+    grid-column: span 2;
+    grid-row: span 2;
+    padding: 2.5rem;
+    justify-content: space-between;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+.status-badge {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.pulse { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; box-shadow: 0 0 10px #4ade80; }
+
+.profile-card h1 { font-size: 1.8rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+.profile-card .bio { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; }
+
+.profile-actions { display: flex; gap: 1rem; }
+.btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn.primary { background: #fff; color: #000; }
+.btn.primary:hover { opacity: 0.9; }
+.btn.secondary { background: rgba(255,255,255,0.1); color: #fff; }
+.btn.secondary:hover { background: rgba(255,255,255,0.2); }
+
+/* Project Cards */
+.project-card {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+}
+.card-icon {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+.card-content h3 { font-size: 1.1rem; margin-bottom: 0.2rem; }
+.card-content p { color: var(--text-muted); font-size: 0.85rem; }
+.arrow-icon { opacity: 0; transform: translateX(-10px); transition: 0.3s; color: var(--text-muted); }
+.project-card:hover .arrow-icon { opacity: 1; transform: translateX(0); }
+
+/* Stack Card */
+.stack-card { grid-column: span 2; }
+.stack-card h3 { font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.tags span {
+    background: rgba(255,255,255,0.05);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Small Cards */
+.social-card {
+    grid-column: span 1;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--text-muted);
+}
+.social-card:hover { color: #fff; }
+.youtube:hover { background: rgba(255, 0, 0, 0.1); color: #ff0000; border-color: rgba(255,0,0,0.2); }
+.twitter:hover { background: rgba(29, 155, 240, 0.1); color: #1d9bf0; border-color: rgba(29,155,240,0.2); }
+
+/* Coffee Card */
+.coffee-card {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(255, 221, 0, 0.1), rgba(255, 221, 0, 0.05));
+    border-color: rgba(255, 221, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coffee-content { display: flex; align-items: center; gap: 10px; font-weight: 600; color: #ffdd00; }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .bento-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .card { grid-column: span 1 !important; grid-row: span 1 !important; }
+    .profile-card { padding: 2rem; }
+    .project-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .arrow-icon { display: none; }
+}
