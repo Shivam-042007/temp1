@@ -3,82 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Kumar Chejara | Developer Grid</title>
+    <title>HypeCoding | Next-Gen Dev Platform</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     
-    <div class="background-gradient"></div>
+    <div class="glow-bg"></div>
 
-    <main class="bento-grid">
-        <div class="card profile-card" data-aos="fade-up">
-            <div class="profile-header">
-                <img src="https://github.com/Shivam-042007.png" alt="Shivam" class="avatar">
-                <div class="status-badge"><span class="pulse"></span> Open to Work</div>
+    <nav>
+        <div class="logo">Hype<span>Coding</span>.</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#courses">Courses</a>
+            <a href="#community">Community</a>
+        </div>
+        <a href="#" class="btn-primary">Get Started</a>
+        <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="badge">🚀 v2.0 is Live</div>
+            <h1>Master the Art of <br> <span class="gradient-text">Creative Coding</span></h1>
+            <p>Join the community of developers building the future. Interactive lessons, real-time code environments, and AI-powered mentorship.</p>
+            
+            <div class="cta-group">
+                <a href="#" class="btn-primary large">Start Coding Free</a>
+                <a href="#" class="btn-secondary"><i class="fas fa-play"></i> Watch Demo</a>
             </div>
-            <h1>Shivam Kumar Chejara</h1>
-            <p class="bio">Full-Stack Developer & Voxel Engine Enthusiast. Building immersive 3D web experiences and AI tools.</p>
-            <div class="profile-actions">
-                <a href="https://github.com/Shivam-042007" target="_blank" class="btn primary"><i class="fab fa-github"></i> GitHub</a>
-                <a href="mailto:contact@shivam.dev" class="btn secondary"><i class="far fa-envelope"></i> Email</a>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <h3>10k+</h3>
+                    <p>Students</p>
+                </div>
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Courses</p>
+                </div>
+                <div class="stat">
+                    <h3>4.9/5</h3>
+                    <p>Rating</p>
+                </div>
             </div>
         </div>
 
-        <a href="https://github.com/Shivam-042007/HypeEngine" target="_blank" class="card project-card hype" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-icon"><i class="fas fa-rocket"></i></div>
-            <div class="card-content">
-                <h3>HypeEngine</h3>
-                <p>Next-gen Chrome start page.</p>
-            </div>
-            <div class="arrow-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
-        </a>
+        <div class="hero-visual" data-aos="fade-left">
+            <div class="code-card tilt-card">
+                <div class="card-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="code-content">
+                    <pre><code class="language-js"><span class="keyword">const</span> <span class="var">hype</span> = <span class="keyword">new</span> <span class="class">Future</span>();
 
-        <a href="https://github.com/Shivam-042007/3D-Minecraft-Web" target="_blank" class="card project-card minecraft" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-icon"><i class="fas fa-cube"></i></div>
-            <div class="card-content">
-                <h3>3D Minecraft Web</h3>
-                <p>Browser-based voxel engine.</p>
-            </div>
-            <div class="arrow-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
-        </a>
+<span class="func">function</span> <span class="name">createMagic</span>() {
+  <span class="return">return</span> {
+    speed: <span class="str">"100%"</span>,
+    efficiency: <span class="str">"Max"</span>,
+    style: <span class="str">"Limitless"</span>
+  };
+}
 
-        <div class="card stack-card" data-aos="fade-up" data-aos-delay="300">
-            <h3>Tech Stack</h3>
-            <div class="tags">
-                <span>JavaScript</span>
-                <span>Three.js</span>
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Voxel.js</span>
+<span class="comment">// Ready to launch?</span>
+hype.<span class="func">init</span>();</code></pre>
+                </div>
+                <div class="cursor"></div>
             </div>
         </div>
+    </header>
 
-        <a href="https://youtube.com/@shivam-042007" target="_blank" class="card social-card youtube" data-aos="fade-up" data-aos-delay="400">
-            <i class="fab fa-youtube"></i>
-        </a>
-
-        <a href="#" class="card social-card twitter" data-aos="fade-up" data-aos-delay="500">
-            <i class="fab fa-twitter"></i>
-        </a>
-
-        <a href="https://www.buymeacoffee.com/shivam042007" target="_blank" class="card coffee-card" data-aos="fade-up" data-aos-delay="600">
-            <div class="coffee-content">
-                <i class="fas fa-mug-hot"></i>
-                <span>Support my work</span>
+    <section id="features" class="bento-grid">
+        <div class="bento-item large" data-aos="zoom-in">
+            <i class="fas fa-laptop-code icon"></i>
+            <h3>Browser IDE</h3>
+            <p>Code directly in your browser with our WebAssembly-powered editor. No setup required.</p>
+        </div>
+        <div class="bento-item" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fas fa-users icon"></i>
+            <h3>Multiplayer</h3>
+            <p>Pair program in real-time.</p>
+        </div>
+        <div class="bento-item highlight" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-brain icon"></i>
+            <h3>AI Mentor</h3>
+            <p>Get instant feedback on your code.</p>
+        </div>
+        <div class="bento-item wide" data-aos="zoom-in" data-aos-delay="300">
+            <div class="content">
+                <h3>Gamified Learning</h3>
+                <p>Earn XP, badges, and climb the leaderboard as you master new frameworks.</p>
             </div>
-        </a>
+            <i class="fas fa-trophy bg-icon"></i>
+        </div>
+    </section>
 
-        <a href="https://github.com/Shivam-042007/ChessAI" target="_blank" class="card project-card chess" data-aos="fade-up" data-aos-delay="700">
-            <div class="card-icon"><i class="fas fa-chess-knight"></i></div>
-            <div class="card-content">
-                <h3>ChessAI</h3>
-                <p>Smart Logic Algorithm.</p>
-            </div>
-        </a>
-    </main>
+    <footer>
+        <p>&copy; 2026 HypeCoding. Built for Developers.</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
